@@ -1,4 +1,5 @@
 package test;
+import domain.Persona;
 
 public class TestForEach {
     public static void main(String[] args) {
@@ -9,6 +10,13 @@ public class TestForEach {
         //Ya no se tiene acceso a un contador
         for(int edad: edades){
             System.out.println("edad = " + edad);
+        }
+        
+        //No se puede utilizar var para un arreglo
+        Persona personas[] = {new Persona("Juan"),new Persona("Karla"),new Persona("Agustin")};
+        
+        for(Persona persona: personas){
+            System.out.println("persona = " + persona);
         }
     }
 }
